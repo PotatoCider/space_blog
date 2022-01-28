@@ -11,7 +11,6 @@ const comments = {
 app.use(express.json());
 
 app.use(express.static('public'));
-
 app.get('/comments', (req, res) => {
     res.setHeader('Content-Type', 'application/json')
         .send(JSON.stringify(comments));
