@@ -1,7 +1,9 @@
 /* stylelint-disable selector-list-comma-newline-after */
 
 body {
-  background-image: url('Space_background.jpg');
+  background-image: url('images/Seamless-Space_pic.png');
+  background-repeat: repeat;
+  background-size: contain;
   color: white;
   height: 100vh
 }
