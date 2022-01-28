@@ -1,0 +1,12 @@
+{
+    "posts": {
+        "cats_2020-01-19": {
+            "comments": [
+                {
+                    "content": "I like your post",
+                    "date": "2020-02-19"
+                }
+            ]
+        }
+    }
+}
