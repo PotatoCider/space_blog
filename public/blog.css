@@ -1,5 +1,19 @@
 /* stylelint-disable selector-list-comma-newline-after */
 
+div{
+  position: relative;
+}
+
+.img-fluid{max-width: 90%; }
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 body {
   background-image: url('images/Seamless-Space_pic.png');
   background-repeat: repeat;
