@@ -25,13 +25,11 @@
     <link rel="stylesheet" type="text/css" href="ContextUs.css">
     </head>
 
-
     <body>
         <div class="container text-white">
             <header class="blog-header py-3">
                 <div class="row flex-nowrap justify-content-between align-items-center">
                     <div class="col-4 pt-1">
-                        <a class=" link-secondary text-light" href="#">Subscribssse</a>
                     </div>
                     <div class="col-4 text-center">
                         <a href="index.html"><img src="images/logo.png" alt="logo" class="center"></a>
@@ -51,22 +49,15 @@
                 </div>
             </header>
     
-            <!-- <div class="nav-scroller py-1 mb-2 text-white" >
+            <div class="nav-scroller py-1 mb-2 text-white" >
                 <nav class="nav d-flex justify-content-between">
-                    <a class="p-2 link-secondary text-light" href="#">World</a>
-                    <a class="p-2 link-secondary text-light" href="#">U.S.</a>
-                    <a class="p-2 link-secondary text-light" href="#">Technology</a>
-                    <a class="p-2 link-secondary text-light" href="#">Design</a>
-                    <a class="p-2 link-secondary text-light" href="#">Culture</a>
-                    <a class="p-2 link-secondary text-light" href="#">Business</a>
-                    <a class="p-2 link-secondary text-light" href="#">Politics</a>
-                    <a class="p-2 link-secondary text-light" href="#">Opinion</a>
-                    <a class="p-2 link-secondary text-light" href="#">Science</a>
-                    <a class="p-2 link-secondary text-light" href="#">Health</a>
-                    <a class="p-2 link-secondary text-light" href="#">Style</a>
-                    <a class="p-2 link-secondary text-light" href="#">Travel</a>
-                </nav>
-            </div> -->
+                <a class="p-2 link-secondary text-light" href="index.html">Home</a>
+                <a class="p-2 link-secondary text-light" href="index.html#sampleBlog">Blog Post</a>
+                <a class="p-2 link-secondary text-light" href="aboutUs.html">About Us</a>
+                <a class="p-2 link-secondary text-light" href="contactUs.html">Contact Us</a>
+                <a class="p-2 link-secondary text-light" href="index.html#video">Video</a>
+            </nav>
+            </div>
         </div>
 
     <main class="container">
@@ -98,7 +89,7 @@
                 </div>
 
                     <div class="col-12 fs-4">
-                        <table class="center">
+                        <table>
                             <tr>
                                 <th>Name</th>
                                 <th style="padding-left: 80px">Email</th>
@@ -106,25 +97,54 @@
                             </tr>
                             <tr>
                                 <td>Tan Yuan Xiang Elroy</td>
-                                <td style="padding-left: 80px">*Insert Email*</td>
+                                <td style="padding-left: 80px">elroytan.20@ichat.sp.edu.sg</td>
                                 <td style="padding-left: 80px">School of Electrical & Electronic Engineering</td>
                             </tr>
                             <tr>
                                 <td>Joseph Goh</td>
-                                <td style="padding-left: 80px">*Insert Email*</td>
+                                <td style="padding-left: 80px">joseph20.20@ichat.sp.edu.sg</td>
                                 <td style="padding-left: 80px">School of Electrical & Electronic Engineering</td>
                             </tr>
                             <tr>
                                 <td>Philip Yang</td>
-                                <td style="padding-left: 80px">*Insert Email*</td>
+                                <td style="padding-left: 80px">philipyang.20@ichat.sp.edu.sg</td>
                                 <td style="padding-left: 80px">School of Electrical & Electronic Engineering</td>
                             </tr>
                             <tr>
                                 <td>Siew Hean</td>
-                                <td style="padding-left: 80px">*Insert Email*</td>
+                                <td style="padding-left: 80px">siewhean17.20@ichat.sp.edu.sg</td>
                                 <td style="padding-left: 80px">School of Electrical & Electronic Engineering</td>
                             </tr>
                         </table>
+
+                        <script>
+                        // Initialize and add the map
+                        function initMap() {
+                            // The location of singaporePoly
+                            const singaporePoly = { lat: 1.3107831151140057, lng: 103.77737849894173 };
+                            // The map, centered at singaporePoly
+                            const map = new google.maps.Map(document.getElementById("map"), {
+                            zoom: 17,
+                            center: singaporePoly,
+                            });
+                            // The marker, positioned at singaporePoly
+                            const marker = new google.maps.Marker({
+                            position: singaporePoly,
+                            map: map,
+                            });
+                        }
+                        </script>
+
+                        <br><br>
+
+                        <!--The div element for the map -->
+                        <div id="map"></div>
+
+                        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+                        <script
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzvwHQkTWejs1QynJQw9yq7coxwJy0s-8&callback=initMap&libraries=&v=weekly"
+                        async
+                        ></script>
                     </div>
                 </div>
             </div>
@@ -139,61 +159,33 @@
                 </div>
 
                     <div class="col-2 p-2 ">
-                        <img class="my-auto  img-fluid  img-responsive rounded-circle" src="images/dummy_profile_pic.jpg" alt="profile pic">
+                        <a href="https://www.instagram.com/nasa/?hl=en" target="_blank"><img class="my-auto  img-fluid" src="images/instagram logo.png" alt="profile pic"></a>
                     </div>
                     <div class=" contaner col-9 align-middle p-4 fs-4">
-                        <p>
-                            Name : Tan Yuan Xiang Elroy
+                        <p style="font-size:30px">
                             <br>
-                            Class : DCPE/FT/2B/01
-                            <br>
-                            Admin Number : P2032399
-                            <br>
-                            Profile : dont know what to write
+                            Instagram: <a href="https://www.instagram.com/nasa/?hl=en" target="_blank">@nasa</a>
                         </p>
                     </div>
 
                     <div class="col-2 p-2 ">
-                        <img class="img-fluid  img-responsive rounded-circle" src="images/dummy_profile_pic.jpg" alt="profile pic">
+                        <a href="https://www.facebook.com/NASA" target="_blank"><img class="my-auto img-fluid" src="images/facebook logo.png" alt="profile pic"></a>
                     </div>
                     <div class=" contaner col-9 align-middle p-4 fs-4">
-                        <p>
-                            Name : Joseph Goh
+                        <p style="font-size:30px">
                             <br>
-                            Class : DCPE/FT/2B/01
-                            <br>
-                            Admin Number : 2002314
-                            <br>
-                            Profile :
+                            Facebook: <a href="https://www.facebook.com/NASA" target="_blank">NASA</a>
                         </p>
                     </div>
    <main class="container">
-
-    <section class="breadcrumps-section">
-        <div class="container p-1 p-sm-3">
-            <div class="row">
-                <div class="col-12">
-                    <h1>
-                        Context us
-                    </h1>
-
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <il class="breadcrumb-item active">Context us</il>
-                    </ol>
-                </div>
-            </div>
-
-        </div>
-    </section>
 
     <div class="container-contact100">
 
 		<div class="wrap-contact100">
 			<form class="contact100-form validate-form">
                 <div class="row">
-                    <div class="col-12 text-center">
-                        <h2>Context Us</h2>
+                    <div class="text-center">
+                        <h2>Any interesting space content to share? Contact Us!</h2>
                         <hr/>
                     </div>
                 </div>
