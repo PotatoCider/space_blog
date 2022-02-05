@@ -13,7 +13,7 @@ div{
 }
 
 body {
-  background-image: url('images/Space_background.jpg');
+  background-image: url('images/Seamless-Space_pic.png');
   background-repeat: repeat;
   background-size: contain;
   color: white;
@@ -647,5 +647,9 @@ iframe {
   }
 }
 
-
-
+#map {
+        height: 400px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+      }
