@@ -49,11 +49,11 @@ router.post('/logout', (req, res, next) => {
   res.redirect('/');
 });
 
-router.get('/signup', (req, res, next) => {
-  res.render('signup');
+router.get('/register', (req, res, next) => {
+  res.render('register');
 });
 
-router.post('/signup', (req, res, next) => {
+router.post('/register', (req, res, next) => {
   const salt = crypto.randomBytes(16);
   crypto.pbkdf2(req.body.password, salt, 310000, 32, 'sha256', (err, hashedPwd) => {
     if (err) return next(err);

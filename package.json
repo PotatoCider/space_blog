@@ -12,6 +12,7 @@
     "passport-local": "^1.0.0",
     "sqlite3": "^5.0.2"
   },
+  "main": "app.js",
   "scripts": {
     "start": "node .",
     "dev": "nodemon .",

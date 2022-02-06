@@ -9,6 +9,7 @@ const logger = require('morgan');
 var SQLiteStore = require('connect-sqlite3')(session);
 
 const authRouter = require('./routes/auth');
+const indexRouter = require('./routes/index');
 
 const app = express();
 
@@ -38,6 +39,7 @@ app.use(session({
 app.use(passport.authenticate('session'));
 
 // inject session messages into res.locals
+// for views to access
 app.use((req, res, next) => {
   res.locals.messages = req.session.messages || [];
   req.session.messages = [];
@@ -46,5 +48,6 @@ app.use((req, res, next) => {
 
 // routers
 app.use('/', authRouter);
+app.use('/', indexRouter);
 
 app.listen(3000, () => console.log('Server started on http://localhost:3000'));
