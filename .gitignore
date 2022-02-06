@@ -1,4 +1,7 @@
+# Node
 node_modules
+
+# Yarn
 .yarn/*
 !.yarn/cache
 !.yarn/patches
@@ -6,3 +9,9 @@ node_modules
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Database
+.db/
+
+# Secrets
+.env

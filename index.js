@@ -1,27 +1,50 @@
 require('./.pnp.cjs').setup(); // yarn
+require('dotenv').config(); // read .env
 
 const express = require('express');
+const passport = require('passport');
+const session = require('express-session');
+const logger = require('morgan');
+
+var SQLiteStore = require('connect-sqlite3')(session);
+
+const authRouter = require('./routes/auth');
 
 const app = express();
 
-const comments = {
-    "user": "comment",
-    "user232": "comment222",
-    "use32323r": "assss",
-};
+// setup logger for development
+app.use(logger('dev'));
 
+// setup views
+app.set('views', 'views');
+app.set('view engine', 'ejs');
+
+// accept application/json and application/x-www-form-urlencoded from html forms
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
+// serve static html/css/js files
 app.use(express.static('public'));
-app.get('/comments', (req, res) => {
-    res.setHeader('Content-Type', 'application/json')
-        .send(JSON.stringify(comments));
-});
 
-app.post('/comments', (req, res) => {
-    const json = req.body;
-    comments[json.name] = json.comment;
-    res.send('ok');
+// setup session
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false, // don't save session if unmodified
+  saveUninitialized: false, // don't create session until something stored
+  store: new SQLiteStore({ db: 'sessions.db', dir: '.db/' })
+}));
+
+// try to authenticate using session first
+app.use(passport.authenticate('session'));
+
+// inject session messages into res.locals
+app.use((req, res, next) => {
+  res.locals.messages = req.session.messages || [];
+  req.session.messages = [];
+  next();
 })
+
+// routers
+app.use('/', authRouter);
 
 app.listen(3000, () => console.log('Server started on http://localhost:3000'));
