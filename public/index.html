@@ -1,434 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta
-      name="author"
-      content="Project "
-    />
-    <meta name="generator" content="Hugo 0.88.1" />
-    <title>Blog Template · Bootstrap v5.1</title>
 
-    <link
-      rel="canonical"
-      href="https://getbootstrap.com/docs/5.1/examples/blog/"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="Project " />
+  <meta name="generator" content="Hugo 0.88.1" />
+  <title>Blog Template · Bootstrap v5.1</title>
 
-    <!-- Bootstrap core CSS -->
-    <link
-      href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/" />
 
-    <!-- Favicons -->
-    <link
-      rel="apple-touch-icon"
-      href="https://getbootstrap.com/docs/5.1/assets/img/favicons/apple-touch-icon.png"
-      sizes="180x180"
-    />
-    <link
-      rel="icon"
-      href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon-32x32.png"
-      sizes="32x32"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon-16x16.png"
-      sizes="16x16"
-      type="image/png"
-    />
-    <link
-      rel="manifest"
-      href="https://getbootstrap.com/docs/5.1/assets/img/favicons/manifest.json"
-    />
-    <link
-      rel="mask-icon"
-      href="https://getbootstrap.com/docs/5.1/assets/img/favicons/safari-pinned-tab.svg"
-      color="#7952b3"
-    />
-    <link
-      rel="icon"
-      href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon.ico"
-    />
-    <meta name="theme-color" content="#7952b3" />
+  <!-- Bootstrap core CSS -->
+  <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
-    <style>
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/apple-touch-icon.png"
+    sizes="180x180" />
+  <link rel="icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32"
+    type="image/png" />
+  <link rel="icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16"
+    type="image/png" />
+  <link rel="manifest" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/manifest.json" />
+  <link rel="mask-icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/safari-pinned-tab.svg"
+    color="#7952b3" />
+  <link rel="icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon.ico" />
+  <meta name="theme-color" content="#7952b3" />
 
-      #more {display: none;}
+  <style>
+    #more {
+      display: none;
+    }
 
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
+  </style>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="blog.css" rel="stylesheet" />
+</head>
 
-    <!-- Custom styles for this template -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap"
-      rel="stylesheet"
-    />
-    <!-- Custom styles for this template -->
-    <link href="blog.css" rel="stylesheet" />
-  </head>
+<body>
+  <!-- -----------------------------------------------HEADER SECTION----------------------------------------------- -->
 
-  <body>
-    <!-- -----------------------------------------------HEADER SECTION----------------------------------------------- -->
-
-    <div class="container text-white">
-      <header class="blog-header py-3">
-        <div class="row flex-nowrap justify-content-between align-items-center">
-          <div class="col-4 pt-1">
-            <!-- <a class="link-secondary text-white" href="#">Subscribe</a> -->
-          </div>
-          <div class="col-4 text-center">
-            <img src="images/logo.png" alt="logo" class="center" />
-          </div>
-          <div
-            class="col-4 d-flex justify-content-end align-items-center text-white"
-          >
-            <a class="link-secondary text-white" href="#" aria-label="Search">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="mx-3"
-                role="img"
-                viewBox="0 0 24 24"
-              >
-                <title>Search</title>
-                <circle cx="10.5" cy="10.5" r="7.5" />
-                <path d="M21 21l-5.2-5.2" />
-              </svg>
-            </a>
-            <a class="btn btn-sm btn-outline-secondary text-light" href="login.html">Login</a>
-          </div>
+  <div class="container text-white">
+    <header class="blog-header py-3">
+      <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-4 pt-1">
+          <!-- <a class="link-secondary text-white" href="#">Subscribe</a> -->
         </div>
-      </header>
-
-      <div class="nav-scroller py-1 mb-2 text-white" >
-            <nav class="nav d-flex justify-content-between">
-                <a class="p-2 link-secondary text-light" href="index.html">Home</a>
-                <a class="p-2 link-secondary text-light" href="showPost.html">Blog Post</a>
-                <a class="p-2 link-secondary text-light" href="aboutUs.html">About Us</a>
-                <a class="p-2 link-secondary text-light" href="contactUs.html">Contact Us</a>
-                <a class="p-2 link-secondary text-light" href="#video">Video</a>
-            </nav>
+        <div class="col-4 text-center">
+          <img src="images/logo.png" alt="logo" class="center" />
         </div>
+        <div class="col-4 d-flex justify-content-end align-items-center text-white">
+          <a class="link-secondary text-white" href="#" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
+              viewBox="0 0 24 24">
+              <title>Search</title>
+              <circle cx="10.5" cy="10.5" r="7.5" />
+              <path d="M21 21l-5.2-5.2" />
+            </svg>
+          </a>
+          <a class="btn btn-sm btn-outline-secondary text-light" href="login.html">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="nav-scroller py-1 mb-2 text-white">
+      <nav class="nav d-flex justify-content-between">
+        <a class="p-2 link-secondary text-light" href="index.html">Home</a>
+        <a class="p-2 link-secondary text-light" href="BlogPost.html">Blog Post</a>
+        <a class="p-2 link-secondary text-light" href="aboutUs.html">About Us</a>
+        <a class="p-2 link-secondary text-light" href="contactUs.html">Contact Us</a>
+        <a class="p-2 link-secondary text-light" href="#video">Video</a>
+      </nav>
+    </div>
+  </div>
+<!-- end of header -->
+  <main class="container">
+    <div class="p-4 p-md-5 mb-4 text-black rounded bg-white">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic">Space Blog</h1>
+        <p class="lead my-3">
+          Here is the first and only space blog where we post up to date
+          contents about the space and more!
+        </p>
+        <p class="lead mb-0">
+          <a href="#" class="fw-bold">Continue reading...</a>
+        </p>
+      </div>
     </div>
 
-    <main class="container">
-      <div class="p-4 p-md-5 mb-4 text-black rounded bg-white">
-        <div class="col-md-6 px-0">
-          <h1 class="display-4 fst-italic">Space Blog</h1>
-          <p class="lead my-3">
-            Here is the first and only space blog where we post up to date
-            contents about the space and more!
-          </p>
-          <p class="lead mb-0">
-            <a href="#" class="fw-bold">Continue reading...</a>
-          </p>
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">#Mars</strong>
+            <h3 class="mb-0 glow">Featured post</h3>
+            <div class="mb-1 text-muted">18 February 2021</div>
+            <p class="card-text mb-auto">
+              Perserverance Rover just landed on Mars!
+            </p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img class="my-auto img-fluid" style="width:230px;height:250px;" src="images/perseverance.jpg"
+              alt="profile pic">
+
+
+          </div>
         </div>
       </div>
-
-      <div class="row mb-2">
-        <div class="col-md-6">
-          <div
-            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
-          >
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">#Moon</strong>
+            <h3 class="mb-0 glow">Moon Landing</h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="mb-auto">
+              SpaceX plans to land humans on the moon
+            </p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
+              aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c" />
+              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- The thing below the fetured post -->
+    <div class="row g-5">
+      <div class="col-md-8">
+        <a href="https://blog.ted.com/reimagine-ted-talks-from-five-inspiring-youth-leaders-in-partnership-with-unicef/"
+          class="text-white">
+          <div class="row g-0 border-bottom overflow-hidden flex-md-row mb-4 shadow-sm h-md-1000 position-relative"
+            href="showPost.html">
             <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-primary">#Mars</strong>
-              <h3 class="mb-0 glow">Featured post</h3>
-              <div class="mb-1 text-muted">18 February 2021</div>
+              <strong class="d-inline-block mb-2 text-primary">News</strong>
+              <h3 class="mb-0 ">Reimagine: TED Talks from five inspiring youth leaders, in partnership with UNICEF</h3>
+              <div class="mb-1 text-muted">By Crawford Hunt, Oliver Friedman, Tom Carter, Brian Greene and Greer Jackson
+                on Dec 10, 2021</div>
               <p class="card-text mb-auto">
-                Perserverance Rover just landed on Mars!
+                Young people across the world are reimagining the future and catalyzing the changes we need today.
+                One thing is clear: we need to listen to youth voices now more than ever. In two days of virtual talks,
+                we heard from five inspiring youth leaders about their most pressing concerns and the opportunities they
+                see to […]
               </p>
-              <a href="#" class="stretched-link">Continue reading</a>
             </div>
             <div class="col-auto d-none d-lg-block">
-              <img class="my-auto img-fluid" style="width:230px;height:250px;" src="images/perseverance.jpg" alt="profile pic">
+              <img class="my-auto img-fluid" style="width:283px;height:212px;"
+                src="https://i0.wp.com/blog.ted.com/wp-content/uploads/sites/2/2021/12/TEDSalon_UNICEF_2021_MakhtoumAbdalla_0009.jpg?resize=283%2C212&ssl=1"
+                alt="blog new pic">
 
-          
+
             </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div
-            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
-          >
-            <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-success">#Moon</strong>
-              <h3 class="mb-0 glow">Moon Landing</h3>
-              <div class="mb-1 text-muted">Nov 11</div>
-              <p class="mb-auto">
-                SpaceX plans to land humans on the moon
-              </p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-              <svg
-                class="bd-placeholder-img"
-                width="200"
-                height="250"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Placeholder: Thumbnail"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-              >
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#55595c" />
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-<!-- The thing below the fetured post -->
-      <div class="row g-5">
-        <div class="col-md-8">
-          <a href="https://blog.ted.com/reimagine-ted-talks-from-five-inspiring-youth-leaders-in-partnership-with-unicef/" class="text-white">
-          <div
-          class="row g-0 border-bottom overflow-hidden flex-md-row mb-4 shadow-sm h-md-1000 position-relative"
-          href="showPost.html"
-        >
-          <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary">News</strong>
-            <h3 class="mb-0 ">Reimagine: TED Talks from five inspiring youth leaders, in partnership with UNICEF</h3>
-            <div class="mb-1 text-muted">By Crawford Hunt, Oliver Friedman, Tom Carter, Brian Greene and Greer Jackson 
-              on Dec 10, 2021</div>
-            <p class="card-text mb-auto">
-              Young people across the world are reimagining the future and catalyzing the changes we need today. 
-              One thing is clear: we need to listen to youth voices now more than ever. In two days of virtual talks, 
-              we heard from five inspiring youth leaders about their most pressing concerns and the opportunities they 
-              see to […]
-            </p>
-          </div>
-          <div class="col-auto d-none d-lg-block">
-            <img class="my-auto img-fluid" style="width:283px;height:212px;" src="https://i0.wp.com/blog.ted.com/wp-content/uploads/sites/2/2021/12/TEDSalon_UNICEF_2021_MakhtoumAbdalla_0009.jpg?resize=283%2C212&ssl=1" alt="blog new pic">
-
-        
-          </div>
-        </div>
-      </a>
-        <a href="showPost.html"class="text-white">
-        <div
-        class="row g-0 border-bottom overflow-hidden flex-md-row mb-4 shadow-sm h-md-1000 position-relative"
-        href="showPost.html"
-      >
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary">Live from TEDWomen</strong>
-          <h3 class="mb-0 ">What Now … for the future? Notes from Session 6 of TEDWomen 2021</h3>
-          <div class="mb-1 text-muted">By Brian Greene, Crawford Hunt, Maria Ladias and Reid Catlett on Dec 3, 2021</div>
-          <p class="card-text mb-auto">
-            Over three days and six sessions at TEDWomen 2021, more than 40 speakers and performers shared ideas that
-             spanned the globe and drew from across cultures and disciplines to answer the question: What now? For the 
-             final session, speakers explored the biggest question of all — What now for the future? — and encouraged us […]
-          </p>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <img class="my-auto img-fluid" style="width:283px;height:212px;" src="https://i0.wp.com/blog.ted.com/wp-content/uploads/sites/2/2021/12/TW21_20211203_2GT5288_3000.jpg?resize=283%2C212&ssl=1" alt="blog new pic">
-
-      
-        </div>
-      </div>
-    </a>
-      <a href="http://example.com"class="text-white">
-      <div
-          class="row g-0 border-bottom overflow-hidden flex-md-row mb-4 shadow-sm h-md-1000 position-relative"
-          href="showPost.html"
-        >
-          <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary">Countdown</strong>
-            <h3 class="mb-0 ">Watch now: TED’s Countdown@COP26, featuring three live-streamed events</h3>
-            <div class="mb-1 text-muted">By TED Staff on Nov 4, 2021</div>
-            <p class="card-text mb-auto">
-              The United Nations climate change conference COP26 is gathering this week and next in Glasgow, 
-              Scotland, and TED’s own climate initiative, Countdown, is going to be part of it. You can participate, 
-              too! From November 4-6, Countdown@COP26 will host a series of three events from the COP26 Climate Action Hub 
-              in Glasgow. The live-streamed events will […]
-            </p>
-          </div>
-          <div class="col-auto d-none d-lg-block">
-            <img class="my-auto img-fluid" style="width:283px;height:212px;" src="https://i0.wp.com/blog.ted.com/wp-content/uploads/sites/2/2021/11/Screen-Shot-2021-11-04-at-2.32.48-PM.png?resize=283%2C212&ssl=1" alt="blog new pic">
-
-        
-          </div>
-        </div>
-        <div class="d-grid mb-2">
         </a>
-          <span id="dots" class="mb-4">
-            <div class="d-grid">
-              <button  onclick="myFunction()" id="myBtn" type="button" class="btn btn-primary btn-block">Click for more Stories</button>
+        <a href="showPost.html" class="text-white">
+          <div class="row g-0 border-bottom overflow-hidden flex-md-row mb-4 shadow-sm h-md-1000 position-relative"
+            href="showPost.html">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Live from TEDWomen</strong>
+              <h3 class="mb-0 ">What Now … for the future? Notes from Session 6 of TEDWomen 2021</h3>
+              <div class="mb-1 text-muted">By Brian Greene, Crawford Hunt, Maria Ladias and Reid Catlett on Dec 3, 2021
+              </div>
+              <p class="card-text mb-auto">
+                Over three days and six sessions at TEDWomen 2021, more than 40 speakers and performers shared ideas
+                that
+                spanned the globe and drew from across cultures and disciplines to answer the question: What now? For
+                the
+                final session, speakers explored the biggest question of all — What now for the future? — and encouraged
+                us […]
+              </p>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img class="my-auto img-fluid" style="width:283px;height:212px;"
+                src="https://i0.wp.com/blog.ted.com/wp-content/uploads/sites/2/2021/12/TW21_20211203_2GT5288_3000.jpg?resize=283%2C212&ssl=1"
+                alt="blog new pic">
+
 
             </div>
-          </span>
+          </div>
+        </a>
+        <a href="http://example.com" class="text-white">
+          <div class="row g-0 border-bottom overflow-hidden flex-md-row mb-4 shadow-sm h-md-1000 position-relative"
+            href="showPost.html">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Countdown</strong>
+              <h3 class="mb-0 ">Watch now: TED’s Countdown@COP26, featuring three live-streamed events</h3>
+              <div class="mb-1 text-muted">By TED Staff on Nov 4, 2021</div>
+              <p class="card-text mb-auto">
+                The United Nations climate change conference COP26 is gathering this week and next in Glasgow,
+                Scotland, and TED’s own climate initiative, Countdown, is going to be part of it. You can participate,
+                too! From November 4-6, Countdown@COP26 will host a series of three events from the COP26 Climate Action
+                Hub
+                in Glasgow. The live-streamed events will […]
+              </p>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img class="my-auto img-fluid" style="width:283px;height:212px;"
+                src="https://i0.wp.com/blog.ted.com/wp-content/uploads/sites/2/2021/11/Screen-Shot-2021-11-04-at-2.32.48-PM.png?resize=283%2C212&ssl=1"
+                alt="blog new pic">
+
+
+            </div>
+          </div>
+          <div class="d-grid mb-2">
+        </a>
+        <span id="dots" class="mb-4">
+          <div class="d-grid">
+            <button onclick="myFunction()" id="myBtn" type="button" class="btn btn-primary btn-block">Click for more
+              Storys</button>
+
+          </div>
+        </span>
 
         <span id="more">
-          <a href="http://example.com"class="text-white">
-          <div
-          class="row g-0 border-bottom overflow-hidden flex-md-row mb-4 shadow-sm h-md-1000 position-relative"
-          href="showPost.html"
-        >
-          <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary">News</strong>
-            <h3 class="mb-0 ">Reimagine: TED Talks from five inspiring youth leaders, in partnership with UNICEF</h3>
-            <div class="mb-1 text-muted">By Crawford Hunt, Oliver Friedman, Tom Carter, Brian Greene and Greer Jackson 
-              on Dec 10, 2021</div>
-            <p class="card-text mb-auto">
-              Young people across the world are reimagining the future and catalyzing the changes we need today. 
-              One thing is clear: we need to listen to youth voices now more than ever. In two days of virtual talks, 
-              we heard from five inspiring youth leaders about their most pressing concerns and the opportunities they 
-              see to […]
-            </p>
-          </div>
-          <div class="col-auto d-none d-lg-block">
-            <img class="my-auto img-fluid" style="width:283px;height:212px;" src="https://i0.wp.com/blog.ted.com/wp-content/uploads/sites/2/2021/12/TEDSalon_UNICEF_2021_MakhtoumAbdalla_0009.jpg?resize=283%2C212&ssl=1" alt="blog new pic">
+          <a href="http://example.com" class="text-white">
+            <div class="row g-0 border-bottom overflow-hidden flex-md-row mb-4 shadow-sm h-md-1000 position-relative"
+              href="showPost.html">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">News</strong>
+                <h3 class="mb-0 ">Reimagine: TED Talks from five inspiring youth leaders, in partnership with UNICEF
+                </h3>
+                <div class="mb-1 text-muted">By Crawford Hunt, Oliver Friedman, Tom Carter, Brian Greene and Greer
+                  Jackson
+                  on Dec 10, 2021</div>
+                <p class="card-text mb-auto">
+                  Young people across the world are reimagining the future and catalyzing the changes we need today.
+                  One thing is clear: we need to listen to youth voices now more than ever. In two days of virtual
+                  talks,
+                  we heard from five inspiring youth leaders about their most pressing concerns and the opportunities
+                  they
+                  see to […]
+                </p>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img class="my-auto img-fluid" style="width:283px;height:212px;"
+                  src="https://i0.wp.com/blog.ted.com/wp-content/uploads/sites/2/2021/12/TEDSalon_UNICEF_2021_MakhtoumAbdalla_0009.jpg?resize=283%2C212&ssl=1"
+                  alt="blog new pic">
 
-        
-          </div>
-        </div>
-      </a>
-        <a href="https://blog.ted.com/what-now-for-the-future-notes-from-session-6-of-tedwomen-2021/"class="text-white">
-        <div
-        class="row g-0 border-bottom overflow-hidden flex-md-row mb-4 shadow-sm h-md-1000 position-relative"
-        href="showPost.html"
-      >
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary">Live from TEDWomen</strong>
-          <h3 class="mb-0 ">What Now … for the future? Notes from Session 6 of TEDWomen 2021</h3>
-          <div class="mb-1 text-muted">By Brian Greene, Crawford Hunt, Maria Ladias and Reid Catlett on Dec 3, 2021</div>
-          <p class="card-text mb-auto">
-            Over three days and six sessions at TEDWomen 2021, more than 40 speakers and performers shared ideas that
-             spanned the globe and drew from across cultures and disciplines to answer the question: What now? For the 
-             final session, speakers explored the biggest question of all — What now for the future? — and encouraged us […]
-          </p>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <img class="my-auto img-fluid" style="width:283px;height:212px;" src="https://i0.wp.com/blog.ted.com/wp-content/uploads/sites/2/2021/12/TW21_20211203_2GT5288_3000.jpg?resize=283%2C212&ssl=1" alt="blog new pic">
 
-      
-        </div>
-      </div>
-    </a>
-      <a href="https://blog.ted.com/happening-this-week-teds-countdowncop26-featuring-three-live-streamed-events/"class="text-white">
-      <div
-          class="row g-0 border-bottom overflow-hidden flex-md-row mb-4 shadow-sm h-md-1000 position-relative"
-          href="showPost.html"
-        >
-          <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary">Countdown</strong>
-            <h3 class="mb-0 ">Watch now: TED’s Countdown@COP26, featuring three live-streamed events</h3>
-            <div class="mb-1 text-muted">By TED Staff on Nov 4, 2021</div>
-            <p class="card-text mb-auto">
-              The United Nations climate change conference COP26 is gathering this week and next in Glasgow, 
-              Scotland, and TED’s own climate initiative, Countdown, is going to be part of it. You can participate, 
-              too! From November 4-6, Countdown@COP26 will host a series of three events from the COP26 Climate Action Hub 
-              in Glasgow. The live-streamed events will […]
-            </p>
-          </div>
-          <div class="col-auto d-none d-lg-block">
-            <img class="my-auto img-fluid" style="width:283px;height:212px;" src="https://i0.wp.com/blog.ted.com/wp-content/uploads/sites/2/2021/11/Screen-Shot-2021-11-04-at-2.32.48-PM.png?resize=283%2C212&ssl=1" alt="blog new pic">
+              </div>
+            </div>
+          </a>
+          <a href="https://blog.ted.com/what-now-for-the-future-notes-from-session-6-of-tedwomen-2021/"
+            class="text-white">
+            <div class="row g-0 border-bottom overflow-hidden flex-md-row mb-4 shadow-sm h-md-1000 position-relative"
+              href="showPost.html">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">Live from TEDWomen</strong>
+                <h3 class="mb-0 ">What Now … for the future? Notes from Session 6 of TEDWomen 2021</h3>
+                <div class="mb-1 text-muted">By Brian Greene, Crawford Hunt, Maria Ladias and Reid Catlett on Dec 3,
+                  2021</div>
+                <p class="card-text mb-auto">
+                  Over three days and six sessions at TEDWomen 2021, more than 40 speakers and performers shared ideas
+                  that
+                  spanned the globe and drew from across cultures and disciplines to answer the question: What now? For
+                  the
+                  final session, speakers explored the biggest question of all — What now for the future? — and
+                  encouraged us […]
+                </p>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img class="my-auto img-fluid" style="width:283px;height:212px;"
+                  src="https://i0.wp.com/blog.ted.com/wp-content/uploads/sites/2/2021/12/TW21_20211203_2GT5288_3000.jpg?resize=283%2C212&ssl=1"
+                  alt="blog new pic">
 
-        
+
+              </div>
+            </div>
+          </a>
+          <a href="https://blog.ted.com/happening-this-week-teds-countdowncop26-featuring-three-live-streamed-events/"
+            class="text-white">
+            <div class="row g-0 border-bottom overflow-hidden flex-md-row mb-4 shadow-sm h-md-1000 position-relative"
+              href="showPost.html">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">Countdown</strong>
+                <h3 class="mb-0 ">Watch now: TED’s Countdown@COP26, featuring three live-streamed events</h3>
+                <div class="mb-1 text-muted">By TED Staff on Nov 4, 2021</div>
+                <p class="card-text mb-auto">
+                  The United Nations climate change conference COP26 is gathering this week and next in Glasgow,
+                  Scotland, and TED’s own climate initiative, Countdown, is going to be part of it. You can participate,
+                  too! From November 4-6, Countdown@COP26 will host a series of three events from the COP26 Climate
+                  Action Hub
+                  in Glasgow. The live-streamed events will […]
+                </p>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img class="my-auto img-fluid" style="width:283px;height:212px;"
+                  src="https://i0.wp.com/blog.ted.com/wp-content/uploads/sites/2/2021/11/Screen-Shot-2021-11-04-at-2.32.48-PM.png?resize=283%2C212&ssl=1"
+                  alt="blog new pic">
+
+
+              </div>
+            </div>
+          </a>
+
+          <div class="d-grid pb-4">
+            <button onclick="document.location='BlogPost.html'" class="btn btn-primary btn-block">Click here to go see more storys</button>
+
           </div>
-        </div>
-      </a>
         </span>
 
 
         <script>
           function myFunction() {
-          var dots = document.getElementById("dots");
-          var moreText = document.getElementById("more");
-          var btnText = document.getElementById("myBtn");
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
 
-          if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            moreText.style.display = "none";
-          } else {
-             dots.style.display = "none";
-             moreText.style.display = "inline";
-           }
-}
+            if (dots.style.display === "none") {
+              dots.style.display = "inline";
+              moreText.style.display = "none";
+            } else {
+              dots.style.display = "none";
+              moreText.style.display = "inline";
+            }
+          }
         </script>
-        
+
+      </div>
+
+
+    </div>
+
+    <!-- --------------------------------------------------ABOUT US------------------------------------------------------ -->
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem">
+        <div class="p-4 mb-3 bg-light rounded text-black">
+          <h4 class="fst-italic">About</h4>
+          <p class="mb-0">
+            A group of Singapore Poly Students doing their project for their
+            module. <a href="aboutUs.html">Click here</a> to know more about
+            us!
+          </p>
         </div>
-        
-      
+        <!-- -------------------------------------------------CONTACT US----------------------------------------------------- -->
+        <div class="p-4 mb-3 bg-light rounded text-black">
+          <h4 class="fst-italic">Contact Us</h4>
+          <p class="mb-0">
+            Want to contact us?
+            <a href="contactUs.html">Click here!</a>
+          </p>
         </div>
 
-<!-- --------------------------------------------------ABOUT US------------------------------------------------------ -->
-        <div class="col-md-4">
-          <div class="position-sticky" style="top: 2rem">
-            <div class="p-4 mb-3 bg-light rounded text-black">
-              <h4 class="fst-italic">About</h4>
-              <p class="mb-0">
-                A group of Singapore Poly Students doing their project for their
-                module. <a href="aboutUs.html">Click here</a> to know more about
-                us!
-              </p>
-            </div>
-<!-- -------------------------------------------------CONTACT US----------------------------------------------------- -->
-            <div class="p-4 mb-3 bg-light rounded text-black">
-              <h4 class="fst-italic">Contact Us</h4>
-              <p class="mb-0">
-                Want to contact us?
-                <a href="contactUs.html">Click here!</a>
-              </p>
-            </div>
-
-<!-- --------------------------------------------------ARCHIVES------------------------------------------------------ -->
-            <div class="p-4">
-              <h4 class="fst-italic">Archives</h4>
-              <ol class="list-unstyled mb-0">
-                <li><a href="#">March 2021</a></li>
-                <li><a href="#">February 2021</a></li>
-                <li><a href="#">January 2021</a></li>
-                <li><a href="#">December 2020</a></li>
-                <li><a href="#">November 2020</a></li>
-                <li><a href="#">October 2020</a></li>
-                <li><a href="#">September 2020</a></li>
-                <li><a href="#">August 2020</a></li>
-                <li><a href="#">July 2020</a></li>
-                <li><a href="#">June 2020</a></li>
-                <li><a href="#">May 2020</a></li>
-                <li><a href="#">April 2020</a></li>
-              </ol>
-            </div>
-          </div>
+        <!-- --------------------------------------------------ARCHIVES------------------------------------------------------ -->
+        <div class="p-4">
+          <h4 class="fst-italic">Archives</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">March 2021</a></li>
+            <li><a href="#">February 2021</a></li>
+            <li><a href="#">January 2021</a></li>
+            <li><a href="#">December 2020</a></li>
+            <li><a href="#">November 2020</a></li>
+            <li><a href="#">October 2020</a></li>
+            <li><a href="#">September 2020</a></li>
+            <li><a href="#">August 2020</a></li>
+            <li><a href="#">July 2020</a></li>
+            <li><a href="#">June 2020</a></li>
+            <li><a href="#">May 2020</a></li>
+            <li><a href="#">April 2020</a></li>
+          </ol>
         </div>
       </div>
-    </main>
+    </div>
+    </div>
+  </main>
 
-    <!-- -----------------------------------------------FOOTER SECTION----------------------------------------------- -->
-    <footer class="blog-footer">
-      <p>
-        Blog template built for
-        <a href="https://getbootstrap.com/">Bootstrap</a> by
-        <a href="https://twitter.com/mdo">@mdo</a>.
-      </p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
-    </footer>
-  </body>
+  <!-- -----------------------------------------------FOOTER SECTION----------------------------------------------- -->
+  <footer class="blog-footer">
+    <div class="footer-container">
+      <div class="footer">
+          <div class="footer-heading footer-1">
+              <h2>About Us</h2>
+              <a href="#">Blog</a>
+              <a href="#">Demo</a>
+              <a href="#">Terms of Service</a>
+          </div>
+          <div class="footer-heading footer-2">
+              <h2>Contact Us</h2>
+              <a href="#">Elroy Tan</a>
+              <a href="#">Joseph Goh</a>
+              <a href="#">Philip Yang</a>
+              <a href="#">Toh Siew Hean</a>
+          </div>
+          <div class="footer-heading footer-3">
+              <h2>Social Media</h2>
+              <a href="#">Instagram</a>
+              <a href="#">Facebook</a>
+              <a href="#">Twitter</a>
+          </div>
+          <div class="footer-email-form">
+              <h2>Subscribe to our newsletter</h2>
+              <input type="email" placeholder="Enter your email address" id="footer-email">
+              <input type="Submit" value="Subscribe" id="footer-email-btn">
+          </div>
+      </div>
+  </div>  
+  </footer>
+</body>
+
 </html>
