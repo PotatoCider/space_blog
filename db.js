@@ -16,8 +16,10 @@ db.serialize(() => {
     )`);
 
   db.run(`CREATE TABLE IF NOT EXISTS posts (
-        owner_id INTEGER UNIQUE NOT NULL,
+        post_id TEXT UNIQUE NOT NULL,
         title TEXT NOT NULL,
+        category TEXT NOT NULL,
+        date TEXT NOT NULL,
         picture_path TEXT,
         authors TEXT NOT NULL,
         content TEXT NOT NULL

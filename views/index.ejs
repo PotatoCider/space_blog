@@ -77,10 +77,10 @@
           <% } else { %>
           <span style="margin-right: 16px">Welcome, <%= user.username %></span>
           <a class="btn btn-sm btn-outline-secondary text-light" href="/" onclick="fetch('/logout', { method: 'POST' })">Logout</a>
-            <% if (user.username == process.env.ADMIN_USERNAME){ %>
-              <span class="p-l-15"></span>
-              <a class="btn btn-sm btn-outline-secondary text-light .ms-1" href="/write_post">Create Post</a>
-            <% } %>
+          <% if (user.username == process.env.ADMIN_USERNAME){ %>
+          <span class="p-l-15"></span>
+          <a class="btn btn-sm btn-outline-secondary text-light .ms-1" href="/admin">Create Post</a>
+          <% } %>
           <% } %>
         </div>
       </div>

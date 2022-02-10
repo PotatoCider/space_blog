@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="The project team">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Add Post</title>
+
+  <script src="/public/vendor/jquery/jquery-3.2.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="/public/css/edit_post.css" rel="stylesheet">
+
+  <!-- Load an icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesopublic\images\space.jpge/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <!-- The sidebar -->
+  <div class="sidebar">
+    <a href="#" class="disabled"><i class="fa fa-fw fa-plus"></i>Add Post</a>
+    <a href="#"><i class="fa fa-fw fa-plus"></i>Announcements</a>
+  </div>
+  <main class="main">
+    <h1 class="m-2 pt-3">Post Blog</h1>
+
+    <form method="post" enctype='multipart/form-data'>
+      <div class="form-group m-2">
+        <div>Title (Alphanumeric)</div>
+        <input type="text" name="title" class="form-control w-25" id="title" placeholder="Post Title" pattern="[A-Za-z0-9_ ]+" required>
+      </div>
+
+      <div class="form-group m-2" id="authors">
+        <div>Author(s)</div>
+        <input type="text" name="authors[]" class="form-control d-inline w-25 my-2" id="input_author" placeholder="Siew Hean" required>
+        <button type="button" class="btn btn-outline-primary d-inline ms-2" onclick="
+        $('#add_author').clone().appendTo('#authors').removeAttr('id').attr('required', true).removeClass('d-none')">
+          <i class="bi bi-plus-lg"></i>
+        </button>
+
+        <div class="d-flex flex-row d-none my-2" id="add_author">
+          <input type="text" name="authors[]" class="form-control w-25" placeholder="Hong Wei">
+          <button onclick="$(this).parent().remove()" type="button" id="remove_author" class="btn btn-primary d-inline ms-2" btn-lg btn-block">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="form-group m-2">
+        <div>Category</div>
+        <input type="text" name="category" class="form-control w-25" id="category" placeholder="Post Category" required>
+      </div>
+
+      <div class="form-group m-2">
+        <div>Image</div>
+        <input type="file" name="picture" accept="image/*" class="form-control-file" id="picture">
+      </div>
+
+      <br>
+
+      <div class="form-group m-2">
+        <div>Content</div>
+        <textarea name="content" class="form-control w-50" id="content" rows="3" required></textarea>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary m-2">Submit Post</button>
+    </form>
+
+
+
+
+  </main>
+
+
+</body>
+
+</html>

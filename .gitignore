@@ -12,7 +12,8 @@ node_modules
 
 # Database & File Uploads
 .db/
-.upload/
+/
+/public/uploads/*
 
 # Secrets
 .env
