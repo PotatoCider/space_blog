@@ -16,7 +16,7 @@
   "scripts": {
     "start": "node .",
     "dev": "nodemon .",
-    "env": "copyfiles .env_sample .env"
+    "env": "copyfiles .env_sample ."
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
