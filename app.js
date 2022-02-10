@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // serve static html/css/js files
-app.use(express.static('public'));
+app.use('/public', express.static('public'));
 
 // setup session
 app.use(session({

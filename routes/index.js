@@ -22,9 +22,9 @@ router.get('/posts/:post_id', (req, res) => {
     res.render('post', { user: req.user });
 });
 
-router.get('/write_posts', (req, res) => {
+router.get('/write_post', (req, res) => {
     if (!req.user) return res.redirect('/');
-    res.render('post', { user: req.user });
+    res.render('write_post', { user: req.user });
 });
 
 module.exports = router;
