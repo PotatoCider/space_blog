@@ -166,7 +166,7 @@ a:visited {
     }
 
     .footer-heading a:hover{
-      color: red;
+      color: #e54ed0;
       transition: 0.3s ease-out;
     }
 
