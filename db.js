@@ -10,6 +10,7 @@ const db = new sqlite3.Database('.db/space_blog.db');
 db.serialize(() => {
   db.run(`CREATE TABLE IF NOT EXISTS users (
         username TEXT UNIQUE,
+        fullname TEXT,
         password_hash BLOB,
         salt BLOB
     )`);
