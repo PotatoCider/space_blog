@@ -45,9 +45,11 @@ router.get('/admin/add_post', (req, res) => {
 
 router.post('/admin/add_post', upload.single('picture'), (req, res, next) => {
   if (!req.user) return res.redirect('/');
-  console.log(req);
+  console.log('req:', req.body);
+  const id = req.body.title.trim().split(' ').join('-').toLowerCase();
+  console.log('id:', id);
   db.run('INSERT INTO posts (post_id, title, category, date, picture_path, authors, content) VALUES (?, ?, ?, ?, ?, ? ,?)', [
-    req.body.title.trim().split(' ').join('-').toLowerCase(),
+    id,
     req.body.title,
     req.body.category,
     new Date().toISOString(),
@@ -57,7 +59,7 @@ router.post('/admin/add_post', upload.single('picture'), (req, res, next) => {
   ], err => {
     if (err) next(err);
 
-    res.redirect('/');
+    res.redirect('/posts/' + id);
   });
 });
 
