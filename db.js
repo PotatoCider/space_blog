@@ -9,16 +9,16 @@ const db = new sqlite3.Database('.db/space_blog.db');
 // create db if not exists
 db.serialize(() => {
   db.run(`CREATE TABLE IF NOT EXISTS users (
-        username TEXT UNIQUE,
-        fullname TEXT,
-        password_hash BLOB,
-        salt BLOB
+        username TEXT UNIQUE NOT NULL,
+        fullname TEXT NOT NULL,
+        password_hash BLOB NOT NULL,
+        salt BLOB NOT NULL
     )`);
 
   db.run(`CREATE TABLE IF NOT EXISTS posts (
-        owner_id INTEGER UNIQUE,
-        title TEXT,
-        content TEXT
+        owner_id INTEGER UNIQUE NOT NULL,
+        title TEXT NOT NULL,
+        content TEXT NOT NULL
     )`);
 
   // add admin user

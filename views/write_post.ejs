@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="The project team">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Add Post</title>
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="adminAddPost.css" rel="stylesheet">
+
+  <!-- Load an icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesopublic\images\space.jpge/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<style>
+  body {
+    background-image: url('images/space.jpg');
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-control {
+    size: 50%;
+  }
+</style>
+
+<body>
+
+  <!-- The sidebar -->
+  <div class="sidebar">
+    <a href="#" class="disabled"><i class="fa fa-fw fa-plus"></i> Add Post</a>
+    <a href="#"><i class="fa fa-fw fa-plus"></i> a tag without disavled</a>
+  </div>
+  <main class="main">
+    <br>
+    <h1>Post Blog</h1>
+
+    <form>
+      <div class="form-group">
+        <label for="InputTitle">Title</label>
+
+        <input type="text" class="form-control" id="InputTitle" placeholder="Title here">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="InputPicture">Blog post images</label>
+        <input type="file" class="form-control-file" id="InputPicture">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="InputAuthor">Author</label>
+        <input type="text" class="form-control" id="InputAuthor" placeholder="e.g. By Crawford Hunt, Oliver Friedman and Greer Jackson on Dec 10, 2021">
+      </div>
+      <br>
+
+      <div class="form-group">
+        <label for="InputContent">The Blog Post Content</label>
+        <textarea class="form-control" id="InputContent" rows="3"></textarea>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+
+
+  </main>
+
+
+</body>
+
+</html>

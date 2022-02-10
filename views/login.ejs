@@ -54,36 +54,35 @@
           </div>
 
           <% if (messages.length> 0) { %>
-            <section class="messages">
-              <% messages.forEach(msg=> { %>
-                <p>
-                  <%= msg %>
-                </p>
-                <% }); %>
-            </section>
-            <% } %>
+          <section class="messages">
+            <% messages.forEach(msg=> { %>
+            <p>
+              <%= msg %>
+            </p>
+            <% }); %>
+          </section>
+          <% } %>
 
-              <div class="contact100-form-checkbox">
-                <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-                <label class="label-checkbox100" for="ckb1">
-                  Remember me
-                </label>
-              </div>
+          <div class="contact100-form-checkbox">
+            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+            <label class="label-checkbox100" for="ckb1">
+              Remember me
+            </label>
+          </div>
 
-              <div class="container-login100-form-btn">
-                <button class="login100-form-btn">
-                  Login
-                </button>
-                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
-                <button type="button" class="login100-form-btn"
-                  onclick="window.location.href='register.html'">Register</button>
-              </div>
+          <div class="container-login100-form-btn">
+            <button class="login100-form-btn">
+              Login
+            </button>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+            <button type="button" class="login100-form-btn" onclick="location.href='/register'">Register</button>
+          </div>
 
-              <div class="text-center p-t-90">
-                <a class="txt1" href="#">
-                  Forgot Password?
-                </a>
-              </div>
+          <div class="text-center p-t-90">
+            <a class="txt1" href="#">
+              Forgot Password?
+            </a>
+          </div>
         </form>
       </div>
     </div>
