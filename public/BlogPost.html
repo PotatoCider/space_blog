@@ -121,13 +121,22 @@
     </a>
     <div class="row">
       <div class="mb-4  text-center">
-        <button type="button" disabled class="btn btn-outline-primary">1</button>
-        <button type="button" class="btn btn-outline-primary">2</button>
-        <button type="button" class="btn btn-outline-primary">3</button>
-        .....
-        <button type="button" class="btn btn-outline-primary">6</button>
-        <button type="button" class="btn btn-outline-primary">7</button>
-        <button type="button" class="btn btn-outline-primary">Last >></button>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+
+            <li class="page-item active" aria-current="page">
+              <span class="page-link">
+                1
+                <span class="sr-only"></span>
+              </span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+
+
+            </li>
+          </ul>
+        </nav>
       </div>
 
   </main>
