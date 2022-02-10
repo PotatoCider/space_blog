@@ -23,11 +23,15 @@ db.serialize(() => {
 
   // add admin user
   const salt = crypto.randomBytes(16);
-  db.run('INSERT OR IGNORE INTO users (username, password_hash, salt) VALUES (?, ?, ?)', [
-    process.env.ADMIN_USERNAME,
-    crypto.pbkdf2Sync(process.env.ADMIN_PASSWORD, salt, 310000, 32, 'sha256'),
-    salt
-  ]);
+  db.run(
+    "INSERT OR IGNORE INTO users (username, fullname, password_hash, salt) VALUES (?, ?, ?, ?)",
+    [
+      process.env.ADMIN_USERNAME,
+      process.env.ADMIN_USERNAME,
+      crypto.pbkdf2Sync(process.env.ADMIN_PASSWORD, salt, 310000, 32, "sha256"),
+      salt,
+    ]
+  );
 });
 
 module.exports = db;
