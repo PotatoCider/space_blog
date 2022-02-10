@@ -47,6 +47,7 @@
   <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet" />
   <!-- Custom styles for this template -->
   <link href="/public/css/blog.css" rel="stylesheet" />
+  <link href="/public/css/util.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -74,8 +75,12 @@
           <% if (!user) { %>
           <a class="btn btn-sm btn-outline-secondary text-light" href="/login">Login</a>
           <% } else { %>
-          <span class="me-3">Welcome, <%= user.fullname %></span>
-          <a class="btn btn-sm btn-outline-secondary text-light" href="/login" onclick="fetch('/logout', { method: 'POST' })">Logout</a>
+          <span style="margin-right: 10px">Welcome, <%= user.username %></span>
+          <a class="btn btn-sm btn-outline-secondary text-light" href="/" onclick="fetch('/logout', { method: 'POST' })">Logout</a>
+            <% if (user.username == process.env.ADMIN_USERNAME){ %>
+              <span class="p-l-15"></span>
+              <a class="btn btn-sm btn-outline-secondary text-light .ms-1" href="/write_post">Create Post</a>
+            <% } %>
           <% } %>
         </div>
       </div>
