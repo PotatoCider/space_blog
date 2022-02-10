@@ -74,8 +74,8 @@
           <% if (!user) { %>
           <a class="btn btn-sm btn-outline-secondary text-light" href="/login">Login</a>
           <% } else { %>
-          <span style="margin-right: 10px">Welcome, <%= user.username %></span>
-          <a class="btn btn-sm btn-outline-secondary text-light" href="/" onclick="fetch('/logout', { method: 'POST' })">Logout</a>
+          <span class="me-3">Welcome, <%= user.fullname %></span>
+          <a class="btn btn-sm btn-outline-secondary text-light" href="/login" onclick="fetch('/logout', { method: 'POST' })">Logout</a>
           <% } %>
         </div>
       </div>

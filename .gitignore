@@ -10,8 +10,9 @@ node_modules
 !.yarn/sdks
 !.yarn/versions
 
-# Database
+# Database & File Uploads
 .db/
+.upload/
 
 # Secrets
 .env

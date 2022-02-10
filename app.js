@@ -6,10 +6,13 @@ const passport = require('passport');
 const session = require('express-session');
 const logger = require('morgan');
 
-var SQLiteStore = require('connect-sqlite3')(session);
 
-const authRouter = require('./routes/auth');
+
+const SQLiteStore = require('connect-sqlite3')(session);
+
 const indexRouter = require('./routes/index');
+const authRouter = require('./routes/auth');
+const postsRouter = require('./routes/posts');
 
 const app = express();
 
@@ -49,5 +52,6 @@ app.use((req, res, next) => {
 // routers
 app.use('/', authRouter);
 app.use('/', indexRouter);
+app.use('/', postsRouter);
 
 app.listen(3000, () => console.log('Server started on http://localhost:3000'));

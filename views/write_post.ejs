@@ -10,10 +10,12 @@
   <meta name="generator" content="Hugo 0.88.1">
   <title>Add Post</title>
 
-
+  <script src="/public/vendor/jquery/jquery-3.2.1.min.js"></script>
 
   <!-- Bootstrap core CSS -->
   <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
 
   <!-- Custom styles for this template -->
@@ -26,18 +28,6 @@
 
 </head>
 
-<style>
-  body {
-    background-image: url('/public/images/space.jpg');
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .form-control {
-    size: 50%;
-  }
-</style>
-
 <body>
 
   <!-- The sidebar -->
@@ -49,30 +39,35 @@
     <br>
     <h1>Post Blog</h1>
 
-    <form>
+    <form method="post" enctype='multipart/form-data'>
       <div class="form-group">
-        <label for="InputTitle">Title</label>
+        <label for="title">Title</label>
 
-        <input type="text" class="form-control" id="InputTitle" placeholder="Title here">
+        <input type="text" name="title" class="form-control" id="title" placeholder="Title here" required>
       </div>
       <br>
       <div class="form-group">
-        <label for="InputPicture">Blog post images</label>
-        <input type="file" class="form-control-file" id="InputPicture">
+        <label for="picture">Blog post images</label>
+        <br>
+        <input type="file" name="picture" accept="image/*" class="form-control-file" id="picture">
       </div>
       <br>
       <div class="form-group">
-        <label for="InputAuthor">Author</label>
-        <input type="text" class="form-control" id="InputAuthor" placeholder="e.g. By Crawford Hunt, Oliver Friedman and Greer Jackson on Dec 10, 2021">
+        Author(s)
+        <div id="authors">
+          <input type="text" name="authors[]" class="form-control m-1" id="input_author" placeholder="Siew Hean" required>
+          <div><input type="text" name="authors[]" class="form-control m-1" id="add_author" placeholder="Siew Hean"><button></div>
+        </div>
+        <button type="button" class="btn btn-outline-primary m-1" onclick="console.log($('#add_author').clone().appendTo('#authors').attr('value', '').removeAttr('id'))">Add</button>
       </div>
       <br>
 
       <div class="form-group">
-        <label for="InputContent">The Blog Post Content</label>
-        <textarea class="form-control" id="InputContent" rows="3"></textarea>
+        <label for="content">The Blog Post Content</label>
+        <textarea name="content" class="form-control" id="content" rows="3"></textarea>
       </div>
       <br>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Submit Post</button>
     </form>
 
 

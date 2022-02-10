@@ -41,7 +41,12 @@
               <path d="M21 21l-5.2-5.2" />
             </svg>
           </a>
+          <% if (!user) { %>
           <a class="btn btn-sm btn-outline-secondary text-light" href="/login">Login</a>
+          <% } else { %>
+          <span class="me-3">Welcome, <%= user.fullname %></span>
+          <a class="btn btn-sm btn-outline-secondary text-light" href="/login" onclick="fetch('/logout', { method: 'POST' })">Logout</a>
+          <% } %>
         </div>
       </div>
     </header>
