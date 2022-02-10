@@ -54,12 +54,14 @@ router.get('/register', (req, res, next) => {
 });
 
 router.post('/register', (req, res, next) => {
+  console.log(req.body);
   const salt = crypto.randomBytes(16);
   crypto.pbkdf2(req.body.password, salt, 310000, 32, 'sha256', (err, hashedPwd) => {
     if (err) return next(err);
 
-    db.run('INSERT INTO users (username, password_hash, salt) VALUES (?, ?, ?)', [
+    db.run('INSERT INTO users (username, fullname, password_hash, salt) VALUES (?, ?, ?, ?)', [
       req.body.username,
+      req.body.fullname,
       hashedPwd,
       salt
     ], err => {
@@ -67,7 +69,8 @@ router.post('/register', (req, res, next) => {
 
       req.login({
         id: this.lastID,
-        username: req.body.username
+        username: req.body.username,
+        fullname: req.body.fullname,
       }, (err) => {
         if (err) return next(err);
         res.redirect('/');
