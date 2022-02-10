@@ -193,16 +193,20 @@ a:visited {
       width: 100px;
       height: 40px;
       border-radius: 4px;
-      background-color: #f9423d;
+      background-color: white;
       outline: none;
       border: none;
-      color: #fff;
+      color: #000;
       font-size: 1rem;
     }
 
     #footer-email-btn:hover{
       cursor: pointer;
-      background-color: #337af1;
+      color: #FFF;
+      background: -webkit-linear-gradient(bottom, #000000, #FFFFFF);
+      background: -o-linear-gradient(bottom, #000000, #FFFFFF);
+      background: -moz-linear-gradient(bottom, #000000, #FFFFFF);
+      background: linear-gradient(bottom, #000000, #FFFFFF);
       transition: all 0.4s ease-out;
     }
 
