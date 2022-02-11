@@ -24,6 +24,14 @@ db.serialize(() => {
         authors TEXT NOT NULL,
         content TEXT NOT NULL
     )`);
+  
+  db.run(`CREATE TABLE IF NOT EXISTS feedback (
+        feedback_id TEXT UNIQUE NOT NULL,
+        fullname TEXT NOT NULL,
+        email TEXT NOT NULL,
+        phone TEXT NOT NULL,
+        message TEXT NOT NULL
+    )`);
 
   // add admin user
   const salt = crypto.randomBytes(16);
