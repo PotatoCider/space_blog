@@ -9,7 +9,11 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/" />
 
   <!-- Bootstrap core CSS -->
-  <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+  <link rel="icon" type="image/png" href="/public/images/logo.png" />
+
 
   <!-- Custom styles for this template -->
   <link href="/public/css/blog.css" rel="stylesheet" />
@@ -28,18 +32,21 @@
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center text-white">
             <a class="link-secondary text-white" href="#" aria-label="Search">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
+                viewBox="0 0 24 24">
                 <title>Search</title>
                 <circle cx="10.5" cy="10.5" r="7.5" />
                 <path d="M21 21l-5.2-5.2" />
               </svg>
             </a>
             <% if (!user) { %>
-            <a class="btn btn-sm btn-outline-secondary text-light" href="/login">Login</a>
-            <% } else { %>
-            <span class="me-3">Welcome, <%= user.fullname %></span>
-            <a class="btn btn-sm btn-outline-secondary text-light" href="/login" onclick="fetch('/logout', { method: 'POST' })">Logout</a>
-            <% } %>
+              <a class="btn btn-sm btn-outline-secondary text-light" href="/login">Login</a>
+              <% } else { %>
+                <span class="me-3">Welcome, <%= user.fullname %></span>
+                <a class="btn btn-sm btn-outline-secondary text-light" href="/login"
+                  onclick="fetch('/logout', { method: 'POST' })">Logout</a>
+                <% } %>
           </div>
         </div>
       </header>
@@ -59,16 +66,19 @@
       <div class="col-md-8">
 
         <article class="blog-post">
-          <h1 class="blog-post-title border-bottom" id="sampleBlog"><%= post.title %></h1>
+          <h1 class="blog-post-title border-bottom" id="sampleBlog">
+            <%= post.title %>
+          </h1>
           <p class="blog-post-meta">
             Created on <%= new Date(post.date).toLocaleString() %>
           </p>
           <p class="blog-post-meta">
-            by <%= post.authors.replace(',', ', ') %>
+            by <%= post.authors.replace(',', ', ' ) %>
           </p>
           <div style="width: 910px; " class="pb-3">
 
-            <img class="img-fluid" src="https://blog.ted.com/wp-content/uploads/sites/2/2021/12/TEDSalon_UNICEF_2021_MakhtoumAbdalla_0009.jpg?resize=1536,864">
+            <img class="img-fluid"
+              src="https://blog.ted.com/wp-content/uploads/sites/2/2021/12/TEDSalon_UNICEF_2021_MakhtoumAbdalla_0009.jpg?resize=1536,864">
             <div class="text-muted">
               "text to show what the picture is say in it"
             </div>
@@ -76,7 +86,7 @@
           </div>
 
           <%- post.content %>
-          <!-- <p>
+            <!-- <p>
             This is some additional paragraph placeholder content. It has been
             written to fill the available space and show how a longer snippet
             of text affects the surrounding content. We'll repeat it often to

@@ -12,7 +12,10 @@
 
 
   <!-- Bootstrap core CSS -->
-  <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="icon" type="image/png" href="/public/images/logo.png" />
 
 
   <!-- Custom styles for this template -->
@@ -35,22 +38,25 @@
         </div>
         <div class="col-4 d-flex justify-content-end align-items-center text-white">
           <a class="link-secondary text-white" href="#" aria-label="Search">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
+              viewBox="0 0 24 24">
               <title>Search</title>
               <circle cx="10.5" cy="10.5" r="7.5" />
               <path d="M21 21l-5.2-5.2" />
             </svg>
           </a>
           <% if (!user) { %>
-          <a class="btn btn-sm btn-outline-secondary text-light" href="/login">Login</a>
-          <% } else { %>
-          <span class="me-3">Welcome, <%= user.fullname %></span>
-          <a class="btn btn-sm btn-outline-secondary text-light" href="/login" onclick="fetch('/logout', { method: 'POST' })">Logout</a>
-          <% if (user.username == process.env.ADMIN_USERNAME){ %>
-          <span class="p-l-15"></span>
-          <a class="btn btn-sm btn-outline-secondary text-light .ms-1" href="/admin">Create Post</a>
-          <% } %>
-          <% } %>
+            <a class="btn btn-sm btn-outline-secondary text-light" href="/login">Login</a>
+            <% } else { %>
+              <span class="me-3">Welcome, <%= user.fullname %></span>
+              <a class="btn btn-sm btn-outline-secondary text-light" href="/login"
+                onclick="fetch('/logout', { method: 'POST' })">Logout</a>
+              <% if (user.username==process.env.ADMIN_USERNAME){ %>
+                <span class="p-l-15"></span>
+                <a class="btn btn-sm btn-outline-secondary text-light .ms-1" href="/admin">Create Post</a>
+                <% } %>
+                  <% } %>
 
         </div>
       </div>
@@ -135,7 +141,8 @@
           </div>
 
           <div class="col-2 pb-5 ">
-            <img class="vertical-center my-auto  img-fluid  img-responsive rounded-circle" src="/public/images/dummy_profile_pic.jpg" alt="profile pic">
+            <img class="vertical-center my-auto  img-fluid  img-responsive rounded-circle"
+              src="/public/images/elroy_profile_pic.jpg" alt="profile pic">
           </div>
           <div class=" contaner col-9 align-middle p-4 fs-4">
             <p>
@@ -145,12 +152,13 @@
               <br>
               Admin Number : P2032399
               <br>
-              Profile : dont know what to write
+              Profile : I want to go to sleep
             </p>
           </div>
 
           <div class="col-2 p-2 ">
-            <img class="vertical-center img-fluid   rounded-circle" src="/public/images/dummy_profile_pic.jpg" alt="profile pic">
+            <img class="vertical-center img-fluid   rounded-circle" src="/public/images/josphes_profile_image.JPG"
+              alt="profile pic">
           </div>
           <div class=" contaner col-9 align-middle p-4 fs-4">
             <p>
@@ -160,12 +168,13 @@
               <br>
               Admin Number : 2002314
               <br>
-              Profile :
+              Profile : I like to do back end
             </p>
           </div>
 
           <div class="col-2 p-2">
-            <img class="vertical-center img-fluid  img-responsive rounded-circle" src="/public/images/dummy_profile_pic.jpg" alt="profile pic">
+            <img class="vertical-center img-fluid  img-responsive rounded-circle"
+              src="/public/images/philip_profile_image.JPG" alt="profile pic">
           </div>
           <div class=" contaner col-9 align-middle p-4 fs-4 ">
             <p>
@@ -175,12 +184,13 @@
               <br>
               Admin Number : 2032188
               <br>
-              Profile :
+              Profile : Hello I am philip
             </p>
           </div>
 
           <div class="col-2 p-2">
-            <img class="vertical-center img-fluid  img-responsive rounded-circle" src="/public/images/dummy_profile_pic.jpg" alt="profile pic">
+            <img class="vertical-center img-fluid  img-responsive rounded-circle"
+              src="/public/images/Siew_Hean_profile_image.JPG" alt="profile pic">
           </div>
           <div class=" contaner col-9 align-middle p-4 fs-4 ">
             <p>
@@ -190,7 +200,7 @@
               <br>
               Admin Number : 2032427
               <br>
-              Profile :
+              Profile : You can find me in Singapore Polythechnic at fc5 or Specturm
             </p>
           </div>
 
