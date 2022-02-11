@@ -2,12 +2,15 @@
   "name": "csad_project",
   "packageManager": "yarn@3.1.1",
   "dependencies": {
+    "braintree": "^3.9.0",
     "connect-sqlite3": "^0.9.13",
     "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.2",
     "express-session": "^1.17.2",
+    "html-to-text": "^8.1.0",
     "morgan": "^1.10.0",
+    "multer": "^1.4.4",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
     "sqlite3": "^5.0.2"

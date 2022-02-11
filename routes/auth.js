@@ -19,16 +19,22 @@ passport.use(new LocalStrategy((username, password, done) => {
       if (!crypto.timingSafeEqual(row.password_hash, hashedPwd))
         return done(null, false, { message: 'Incorrect username or password.' });
 
-      return done(null, row);
+      return done(null, {
+        id: row.id,
+        username: row.username,
+        fullname: row.fullname,
+      });
     });
   });
 }));
 
 passport.serializeUser((user, done) => {
-  done(null, { id: user.id, username: user.username });
+  console.log('serialize', user);
+  done(null, user);
 });
 
 passport.deserializeUser((user, done) => {
+  console.log('deserialize', user);
   done(null, user);
 });
 
@@ -54,7 +60,6 @@ router.get('/register', (req, res, next) => {
 });
 
 router.post('/register', (req, res, next) => {
-  console.log(req.body);
   const salt = crypto.randomBytes(16);
   crypto.pbkdf2(req.body.password, salt, 310000, 32, 'sha256', (err, hashedPwd) => {
     if (err) return next(err);
@@ -64,7 +69,7 @@ router.post('/register', (req, res, next) => {
       req.body.fullname,
       hashedPwd,
       salt
-    ], err => {
+    ], function (err) {
       if (err) return next(err);
 
       req.login({

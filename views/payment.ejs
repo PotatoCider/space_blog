@@ -40,49 +40,69 @@
           </span>
 
           <span class="login100-form-title p-b-34 p-t-27">
-            Log in
+            Support Us
           </span>
 
-          <div class="wrap-input100 validate-input" data-validate="Enter username">
-            <input class="input100" type="text" name="username" placeholder="Username" required autofocus>
+          <div class="wrap-input100 validate-input">
+            <input class="input100" type="number" name="donation" placeholder="Donation Amount" id="donation_amount" min="1" required autofocus>
             <span class="focus-input100" data-placeholder="&#xf207;"></span>
           </div>
 
-          <div class="wrap-input100 validate-input" data-validate="Enter password">
-            <input class="input100" type="password" name="password" placeholder="Password" required>
-            <span class="focus-input100" data-placeholder="&#xf191;"></span>
-          </div>
+          <p>
+            Your donation will help to support us by keeping the site active!
+          </p>
+          <script></script>
 
-          <% if (messages.length> 0) { %>
-          <section class="messages">
-            <% messages.forEach(msg=> { %>
-            <p>
-              <%= msg %>
-            </p>
-            <% }); %>
-          </section>
-          <% } %>
+          <!DOCTYPE html>
+          <html>
 
-          <div class="contact100-form-checkbox">
-            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-            <label class="label-checkbox100" for="ckb1">
-              Remember me
-            </label>
-          </div>
+          <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices -->
+          </head>
 
-          <div class="container-login100-form-btn">
-            <button class="login100-form-btn">
-              Login
-            </button>
-            <div class="mx-3"></div>
-            <button type="button" class="login100-form-btn" onclick="location.href='/register'">Register</button>
-          </div>
+          <body>
+            <!-- Include the PayPal JavaScript SDK; replace "test" with your own sandbox Business account app client ID -->
+            <script src="https://www.paypal.com/sdk/js?client-id=AX-RDBxk004Jn61AzVzZB0sWIR1oXdPr3OLtT_-os-n6JnPVlbB_gPK_z-U1f3wEkfoPDA3I5T1Fa0P9&currency=SGD&disable-funding=credit,card"></script>
 
-          <!-- <div class="text-center p-t-50">
-            <a class="txt1" href="#">
-              Forgot Password?
-            </a>
-          </div> -->
+            <!-- Set up a container element for the button -->
+            <div id="paypal-button-container"></div>
+
+            <script>
+              paypal.Buttons({
+
+                // Sets up the transaction when a payment button is clicked
+                createOrder: function(data, actions) {
+                  const elem = document.getElementById('donation_amount');
+                  if (elem.value < 0.01) return;
+                  return actions.order.create({
+                    purchase_units: [{
+                      amount: {
+                        // Can reference variables or functions. Example: `value: document.getElementById('...').value`
+                        value: (+elem.value).toFixed(2),
+                      }
+                    }]
+                  });
+                },
+
+                // Finalize the transaction after payer approval
+                onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(orderData) {
+                    // Successful capture! For dev/demo purposes:
+                    console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                    var transaction = orderData.purchase_units[0].payments.captures[0];
+                    // alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
+
+                    // When ready to go live, remove the alert and show a success message within this page. For example:
+                    var element = document.getElementById('paypal-button-container');
+                    element.innerHTML = '<h3 style="color:black">Thank you for your payment!</h3>';
+                    // Or go to another URL:  actions.redirect('thank_you.html');
+                  });
+                }
+              }).render('#paypal-button-container');
+            </script>
+          </body>
+
+          </html>
         </form>
       </div>
     </div>
@@ -106,7 +126,7 @@
   <!--===============================================================================================-->
   <script src="/public/vendor/countdowntime/countdowntime.js"></script>
   <!--===============================================================================================-->
-  <script src="/public/js/login.js"></script>
+  <script src="/public/js/payment.js"></script>
 
 </body>
 

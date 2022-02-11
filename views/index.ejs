@@ -47,6 +47,7 @@
   <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet" />
   <!-- Custom styles for this template -->
   <link href="/public/css/blog.css" rel="stylesheet" />
+  <link href="/public/css/util.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -57,6 +58,7 @@
       <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="col-4 pt-1">
           <!-- <a class="link-secondary text-white" href="#">Subscribe</a> -->
+          <a class="btn btn-sm btn-outline-secondary text-light" href="/payment">Donate</a>
         </div>
         <div class="col-4 text-center">
           <img src="/public/images/logo.png" alt="logo" class="center" />
@@ -73,8 +75,12 @@
           <% if (!user) { %>
           <a class="btn btn-sm btn-outline-secondary text-light" href="/login">Login</a>
           <% } else { %>
-          <span style="margin-right: 10px">Welcome, <%= user.username %></span>
+          <span style="margin-right: 16px">Welcome, <%= user.username %></span>
           <a class="btn btn-sm btn-outline-secondary text-light" href="/" onclick="fetch('/logout', { method: 'POST' })">Logout</a>
+          <% if (user.username == process.env.ADMIN_USERNAME){ %>
+          <span class="p-l-15"></span>
+          <a class="btn btn-sm btn-outline-secondary text-light .ms-1" href="/admin/add_post">Create Post</a>
+          <% } %>
           <% } %>
         </div>
       </div>
@@ -187,6 +193,9 @@
           </div>
         </div>
       </div>
+
+
+
       <!-- The thing below the fetured post -->
       <div class="row g-5">
         <div class="col-md-8">
@@ -273,7 +282,7 @@
             <div class="d-grid">
               <button onclick="myFunction()" id="myBtn" type="button" class="btn btn-primary btn-block">Click
                 for more
-                Storys</button>
+                Stories</button>
 
             </div>
           </span>
@@ -364,7 +373,7 @@
 
             <div class="d-grid pb-4">
               <button onclick="document.location='BlogPost.html'" class="btn btn-primary btn-block">Click here
-                to go see more storys</button>
+                to go see more stories</button>
 
             </div>
           </span>
@@ -412,7 +421,7 @@
           </div>
 
           <!-- --------------------------------------------------ARCHIVES------------------------------------------------------ -->
-          <div class="p-4">
+          <!-- <div class="p-4">
             <h4 class="fst-italic">Archives</h4>
             <ol class="list-unstyled mb-0">
               <li><a href="#">March 2021</a></li>
@@ -428,7 +437,7 @@
               <li><a href="#">May 2020</a></li>
               <li><a href="#">April 2020</a></li>
             </ol>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
