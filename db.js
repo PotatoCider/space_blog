@@ -21,6 +21,7 @@ db.serialize(() => {
         category TEXT NOT NULL,
         date TEXT NOT NULL,
         picture_path TEXT,
+        picture_caption TEXT,
         authors TEXT NOT NULL,
         content TEXT NOT NULL
     )`);

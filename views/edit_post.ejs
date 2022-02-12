@@ -36,19 +36,19 @@
     <a href="#"><i class="fa fa-fw fa-plus"></i>Announcements</a>
   </div>
   <main class="main">
-    <h1 class="m-2 pt-3">Post Blog</h1>
+    <h1 class="m-2 pt-3"><%= post.post_id ? 'Edit ' : '' %>Post Blog</h1>
 
-    <form method="post" enctype='multipart/form-data'>
+    <form method="post" <%- post.post_id ? '' : 'enctype="multipart/form-data"' %>>
       <div class="form-group m-2">
-        <div>Title (Alphanumeric)</div>
-        <input type="text" name="title" class="form-control w-25" id="title" placeholder="Post Title" pattern="[A-Za-z0-9_ ]+" required>
+        <div>Title (Alphanumeric) *</div>
+        <input type="text" name="title" <%- post.post_id ? `value="${post.title}" disabled ` : '' %>" class="form-control w-25" id="title" placeholder="Post Title" pattern="[A-Za-z0-9_ ]+" required>
       </div>
 
       <div class="form-group m-2" id="authors">
-        <div>Author(s)</div>
-        <input type="text" name="authors[]" class="form-control d-inline w-25 my-2" id="input_author" placeholder="Siew Hean" required>
+        <div>Author(s) *</div>
+        <input type="text" name="authors[]" value="<%= post.authors && post.authors[0] %>" class="form-control d-inline w-25 my-2" id="input_author" placeholder="Siew Hean" required>
         <button type="button" class="btn btn-outline-primary d-inline ms-2" onclick="
-        $('#add_author').clone().appendTo('#authors').removeAttr('id').attr('required', true).removeClass('d-none')">
+        $('#add_author').clone().appendTo('#authors').removeAttr('id').removeClass('d-none')">
           <i class="bi bi-plus-lg"></i>
         </button>
 
@@ -58,26 +58,72 @@
             <i class="bi bi-x-lg"></i>
           </button>
         </div>
+
+        <% post.authors && post.authors.slice(1).forEach(author => { %>
+        <div class="d-flex flex-row my-2">
+          <input type="text" name="authors[]" value="<%= author %>" class="form-control w-25" placeholder="Hong Wei">
+          <button onclick="$(this).parent().remove()" type="button" id="remove_author" class="btn btn-primary d-inline ms-2" btn-lg btn-block">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <% }) %>
       </div>
 
       <div class="form-group m-2">
-        <div>Category</div>
-        <input type="text" name="category" class="form-control w-25" id="category" placeholder="Post Category" required>
+        <div>Category *</div>
+        <input type="text" name="category" value="<%= post.category %>" class="form-control w-25" id="category" placeholder="Post Category" required>
       </div>
 
       <div class="form-group m-2">
         <div>Image</div>
-        <input type="file" name="picture" accept="image/*" class="form-control-file" id="picture">
+
+        <% if (post.picture_path) { %>
+        <img class="img-fluid" src="/<%= post.picture_path %>">
+        <% } else { %>
+        <input type="file" name="picture" accept="image/*" class="form-control-file" id="picture" onchange="showCaption()">
+        <% } %>
+      </div>
+
+      <script>
+        function showCaption() {
+          if ($('#picture')[0].files.length == 0) {
+            $('#caption_group').addClass('d-none');
+          } else {
+            $('#caption_group').removeClass('d-none');
+            $('#caption')[0].value = '';
+          }
+        }
+      </script>
+
+      <div class="form-group m-2 <%= post.picture_path ? '' : 'd-none' %>" id="caption_group">
+        <div>Caption</div>
+        <input type="text" name="caption" value="<%= post.picture_caption %>" class="form-control w-25" id="caption">
       </div>
 
       <br>
 
       <div class="form-group m-2">
-        <div>Content</div>
-        <textarea name="content" class="form-control w-50" id="content" rows="3" required></textarea>
+        <div>Content *</div>
+        <textarea name="content" class="form-control w-50" id="content" rows="20" required><%= post.content %></textarea>
       </div>
       <br>
-      <button type="submit" class="btn btn-primary m-2">Submit Post</button>
+
+      <% if (post.post_id) { %>
+      <div class="d-none">
+
+        <% post.authors.forEach(author => { %>
+        <input type="text" name="old_authors[]" value="<%= author %>">
+        <% }); %>
+        <input type="text" name="old_category" value="<%= post.category %>">
+        <input type="text" name="old_caption" value="<%= post.caption %>">
+        <input type="text" name="old_content" value="<%= post.content %>">
+      </div>
+      <% } %>
+
+      <button type="submit" class="btn btn-primary m-2"><%= post.post_id ? 'Edit' : 'Submit' %> Post</button>
+
+      <button class="btn btn-primary m-2" style="background-color:red" onclick="fetch('/admin/delete_post/<%= post.post_id %>', { method: 'POST' })">Delete Post</button>
+      <br><br>
     </form>
 
 
