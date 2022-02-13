@@ -1,7 +1,6 @@
-# csad_project
+# space_blog
+Simple express.js app for my
 CSAD Module project for SP
-
-Doing a blog for A project using bootstrap 
 
 # Setup
 1. Install [Node.js](https://nodejs.org/en/download/)
