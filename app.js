@@ -1,4 +1,7 @@
 require('./.pnp.cjs').setup(); // yarn
+const fs = require('fs');
+
+if (!fs.existsSync('.env')) fs.copyFileSync('.env_sample', '.env');
 require('dotenv').config(); // read .env
 
 const express = require('express');
